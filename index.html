@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <script>if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode)) window.location.href="https://support.dmeng.net/upgrade-your-browser.html?referrer="+encodeURIComponent(window.location.href); </script>
+    
+    
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Regular.woff2" as="font">
+        <link rel="preload" crossorigin="crossorigin" href="/fonts/roboto/Roboto-Bold.woff2" as="font">
+    
+    
+    
+        <link rel="shortcut icon" href="/icons/favicon.ico">
+    
+
+    
+    
+        
+<link rel="stylesheet" href="/gtazy/css/mdui.min.v1.0.0.css">
+
+    
+    
+<link rel="stylesheet" href="/gtazy/css/main.css">
+<link rel="stylesheet" href="/gtazy/css/iconfont.css">
+
+
+    
+    
+
+    
+        <script data-ad-client="ca-" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+        <script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        
+            load: ['[tex]/mhchem'],
+        
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        
+            packages: {'[+]': ['mhchem']},
+        
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+          
+
+
+    
+    
+    <title>
+          
+            GTA资源分享站
+        
+    </title>
+    
+    
+<meta name="generator" content="Hexo 5.4.2"></head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-primary-teal mdui-theme-accent-blue">
+  
+  <header class="mdui-appbar mdui-appbar-fixed">
+  <div id="toolbar" class="mdui-toolbar mdui-color-theme">
+    <button class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="iconfont icon-menu"></i></button>
+    <a href="/gtazy/" class="mdui-typo-headline">GTA资源分享站</a>
+    <a href="/gtazy/" class="header-subtitle mdui-typo-headline"></a>
+    <div class="mdui-toolbar-spacer"></div>
+    <button class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: 'search'}"><i class="iconfont icon-search"></i></button>
+  </div>
+</header>
+
+<div class="mdui-dialog" id="search">
+  
+    <div class="search-form">
+      <input type="search" class="search-form-input" placeholder="请输入关键字" onfocus="listenSearchFunc()">
+    </div>
+    <div class="search-result" data-resource="/gtazy/search.xml"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer">
+    <div class="mdui-tab" mdui-tab>
+        <a href="#sidebar-tab1" id="sidebartab" class="mdui-ripple mdui-tab-active">站点概览</a>
+        <a href="#sidebar-tab2" id="sidebartab" class="mdui-ripple">关于</a>
+    </div>
+
+    
+    <div id="sidebar-tab1" class="mdui-p-a-1">
+        <div class="mdui-list">
+            
+                
+                <a href="/gtazy/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-home"></i>
+                    </div>
+                    <div class="mdui-list-item-content">主页</div>
+                </a>
+            
+                
+                <a href="/gtazy/tags/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-bookmark"></i>
+                    </div>
+                    <div class="mdui-list-item-content">标签</div>
+                </a>
+            
+                
+                <a href="/gtazy/categories/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-folder"></i>
+                    </div>
+                    <div class="mdui-list-item-content">分类</div>
+                </a>
+            
+                
+                <a href="/gtazy/archives/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-archive"></i>
+                    </div>
+                    <div class="mdui-list-item-content">归档</div>
+                </a>
+            
+                
+                <a href="/gtazy/tools/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-tools"></i>
+                    </div>
+                    <div class="mdui-list-item-content">工具箱</div>
+                </a>
+            
+                
+                <a href="/gtazy/about/" class="mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-user"></i>
+                    </div>
+                    <div class="mdui-list-item-content">关于</div>
+                </a>
+            
+            <div class="mdui-list-item mdui-ripple">
+                <div class="mdui-list-item-icon">
+                    <i class="iconfont icon-moon"></i>
+                </div>
+                <div class="mdui-list-item-content">夜间模式</div>
+                <label class="mdui-switch" id="darkmode">
+                  <input type="checkbox" id="nightmode_switch"/>
+                  <i class="mdui-switch-icon"></i>
+                </label>
+            </div>           
+        </div>
+    </div>
+
+    
+    <div id="sidebar-tab2" class="mdui-p-a-1">
+        <div class="sidebar-overview">
+            <div class="sidebar-avatar">
+                
+                    <img src="/icons/avatar.gif"/>
+                
+            </div>
+            <div class="sidebar-author-name">无聊的一名网友</div>
+            <div class="sidebar-description"></div>
+        </div>
+        <div class="sidebar-links">
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-mail"></i></span>
+                    <a href="mailto:a6282372@163.com" class="mdui-chip-title">E-Mail</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-github"></i></span>
+                    <a target="_blank" rel="noopener" href="https://github.com/Aboringnetizen" class="mdui-chip-title">GitHub</a>
+                </div>
+            
+                
+                <div class="mdui-chip">
+                    <span class="mdui-chip-icon"><i class="iconfont icon-youtube"></i></span>
+                    <a target="_blank" rel="noopener" href="https://space.bilibili.com/1225274377" class="mdui-chip-title">Bilibili</a>
+                </div>
+            
+        </div>
+        <ul class="mdui-list" mdui-collapse="{accordion: true}">
+            <li class="mdui-collapse-item">
+                <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                    <div class="mdui-list-item-icon">
+                        <i class="iconfont icon-link"></i>
+                    </div>
+                    <div class="mdui-list-item-content">友情链接</div>
+                    <div class="mdui-collapse-item-arrow">
+                        <i class="mdui-list-item-icon iconfont icon-angle-down"></i>
+                    </div>
+                </div>
+                <ul id="linksList" class="mdui-collapse-item-body mdui-list mdui-list-dense">
+                    
+                        <a target="_blank" rel="noopener" href="http://gtamod-cn.acchs.top/" class="mdui-list-item mdui-ripple">
+                            GTAmod中文组官网
+                        </a>
+                    
+                        <a href="lzh10.netlify.app" class="mdui-list-item mdui-ripple">
+                            Lzh10
+                        </a>
+                    
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mdui-divider"></div>
+    
+    
+</aside>
+  
+  <main id="main-contain" class="mdui-container mdui-m-t-5">
+    
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/13/%E8%87%AA%E7%94%B1%E5%9F%8E%E6%95%85%E4%BA%8BPC%E7%89%88%E6%9C%AC%E5%85%A8%E9%83%A8%E7%A7%BB%E6%A4%8D/">自由城故事PC版本全部移植100%</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-13
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-13
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>自由城故事是一款由Rockstar Games制作并发行的动作冒险游戏，该游戏以自由度高和开放式世界闻名。该游戏最初发布于2006年，当时只支持PlayStation Portable（PSP）平台，后来才陆续在其他平台上推出。近年来，一些游戏爱好者制作了自由城故事PC版本的移植，以便玩家在更广泛的平台上享受游戏。<br>在这篇文章中，我将讨论自由城故事PC版本的移植，并评估这个版本的游戏体验。</p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/13/%E8%87%AA%E7%94%B1%E5%9F%8E%E6%95%85%E4%BA%8BPC%E7%89%88%E6%9C%AC%E5%85%A8%E9%83%A8%E7%A7%BB%E6%A4%8D/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/12/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E9%AB%98%E6%B8%85%E6%95%B4%E5%90%88%E5%8C%85/">圣安地列斯模组：高清整合包</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>《侠盗猎车手：圣安地列斯》（Grand Theft Auto: San Andreas，以下简称GTASA）是一款于2004年上市的开放世界动作冒险游戏。多年来，这款经典游戏一直受到广大玩家的喜爱。但其原版画面不尽如人意，特别是在现代高分辨率设备上，更是难以让人满意。因此，网上出现了很多针对GTASA的高清整合包，旨在提升游戏画面质量。</p>
+<p>本文将介绍一个被称为“无聊的一名网友”的UP主制作的GTASA高清整合包。我们将探讨该整合包的特点、安装方法、优缺点等方面，以帮助读者更好地了解并使用这个整合包。 </p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/12/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E9%AB%98%E6%B8%85%E6%95%B4%E5%90%88%E5%8C%85/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/12/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E4%BC%A0%E5%A5%87PC%E7%89%88%E6%9C%AC/">罪恶都市传奇PC版本</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-13
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>罪恶都市传奇是一款备受玩家喜爱的游戏，它在移动平台上已经非常成功。现在，玩家终于将这款游戏移植到了PC平台，为广大玩家带来更加震撼的游戏体验。本文将对罪恶都市传奇PC版本进行全面评测。（移动版：指PSP，属于广义移动设备）</p>
+<p>在这个游戏中，玩家将扮演一个名叫维克·万斯的新兵，通过完成各种任务来逐渐成为城市的头号大佬。与其他GTA系列游戏类似，罪恶都市传奇PC版本也充满了各种暴力、淫秽和危险元素。但正是这些元素使得游戏充满了挑战和乐趣。</p>
+<p><img src="https://efvccn.my.canvasite.cn/tu-chuang/images/612c502dbb4c1725201e134f1a6482dc.png" alt="https://efvccn.my.canvasite.cn/tu-chuang/images/612c502dbb4c1725201e134f1a6482dc.png" title="https://efvccn.my.canvasite.cn/tu-chuang/images/612c502dbb4c1725201e134f1a6482dc.png"></p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/12/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E4%BC%A0%E5%A5%87PC%E7%89%88%E6%9C%AC/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/08/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%94%BB%E8%B4%A8%E5%A2%9E%E5%BC%BA%E6%95%B4%E5%90%88%E5%8C%85/">罪恶都市模组：画质增强整合包</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-08
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <h1 id="警告！警告！警告！"><a href="#警告！警告！警告！" class="headerlink" title=" 警告！警告！警告！"></a></font><font color=red> 警告！警告！警告！</h1><p><strong></font><font color=black>此补丁对性能要求较高，务必保证您的电脑满足以下配置：</strong>(1080P 30FPS)</p>
+<ul>
+<li>CPU:i3-6100或AMD同性能</li>
+<li>GPU:GTX750或HD7790</li>
+<li>内存:DDR4 2666 6G</li>
+</ul>
+<p><strong>如果您的电脑不符合此最低性能要求，我们对您的电脑可能造成的损坏不负任何责任！您下载整合资源即视为同意此条约！我们提供的资源仅供学习，禁止倒卖，请在24小时内删除！</strong></p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/08/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%94%BB%E8%B4%A8%E5%A2%9E%E5%BC%BA%E6%95%B4%E5%90%88%E5%8C%85/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9ATDDISA2015%E7%A8%B3%E5%AE%9A%E7%89%88%E8%BF%98%E5%8E%9F%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AFBeta%E7%89%88%E6%9C%AC/">圣安地列斯模组：TDDISA2015稳定版还原圣安地列斯Beta版本</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-13
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>圣安地列斯自从首次发行以来，就被众多玩家视为经典游戏。但是，有许多玩家对其Beta版本更为青睐，因为Beta版本带来了很多创新的内容和玩法。但是这些 Beta 版本的功能都被削减或完全删除了，今天呢，我们就来面对一个问题：如何还原 Beta 版本的内容和玩法？<br>本文将介绍的是针对圣安地列斯（San Andreas）游戏的一个模组：TDDISA2015稳定版。这个模组是一个游戏自定义安装包，它通过添加 Beta 版本的内容和玩法来完全还原了圣安地列斯 Beta 版。通过这个模组，您可以轻松地体验到 Beta 版本的秘密和他们之前的 Alpha 版本，同时还可以自定义您的游戏体验。请您耐心阅读下一部分以了解如何安装和使用 TDDISA2015 稳定版的圣安地列斯 Beta 版本还原模组。</p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9ATDDISA2015%E7%A8%B3%E5%AE%9A%E7%89%88%E8%BF%98%E5%8E%9F%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AFBeta%E7%89%88%E6%9C%AC/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0/">圣安地列斯模组：第一人称</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>《侠盗猎车手：圣安地列斯》（Grand Theft Auto: San Andreas，以下简称GTASA）是一款于2004年上市的开放世界动作冒险游戏。多年来，这款经典游戏一直受到广大玩家的喜爱。但其原版画面不尽如人意，虽然已经有多个游戏版本和MOD可供选择，但是仍然存在着一些不能满足玩家需求的问题。其中一个问题就是缺乏第一人称视角的选项。在这篇博客中，我们将探讨一个名为“SA模组：第一人称”的MOD，它可以给玩家带来全新的游戏体验。<br>[<img src="https://efvccn.my.canvasite.cn/gtasamoddown/images/7a92b7e2d4f138c2f6ca3e439317a9ce.jpg">]</p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E5%B8%83%E5%A8%83%E5%A8%83mod/">圣安地列斯模组：布娃娃mod</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>在游戏GTASA中，我们可以扮演不同角色进行各种冒险。但是，在这个开放世界游戏中，NPC并没有被赋予足够的物理效果，导致他们看起来有些僵硬和不真实。但是现在，通过布娃娃mod，NPC将会得到更加逼真的物理表现，让整个游戏变得更加生动有趣。</p>
+<p>布娃娃mod是一个第一人称mod，旨在为GTASA游戏中的NPC添加逼真的物理效果。该mod由著名mod作者Junior_Djjr制作，在其之前发布的版本中已经修复了一些错误。而在这个新版中，则进一步提升了NPC的物理效果，使得他们的行动看起来更加自然流畅。</p>
+<p><img src="https://efvccn.my.canvasite.cn/gtasamoddown/images/50ae411ad78174348017f21ea4930b9e.jpg"><br><img src="https://efvccn.my.canvasite.cn/gtasamoddown/images/7387be110b0708fd120da643c2659cc9.png"></p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E5%9C%A3%E5%AE%89%E5%9C%B0%E5%88%97%E6%96%AF%E6%A8%A1%E7%BB%84%EF%BC%9A%E5%B8%83%E5%A8%83%E5%A8%83mod/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E6%8B%93%E5%B1%95%E5%8A%9F%E8%83%BD%E6%B1%89%E5%8C%96/">罪恶都市模组：扩展功能汉化</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>罪恶都市是一款在2002年发行的开放世界动作游戏，历史上具有非常高的评价和铁粉数量。由于游戏本身提供的限制，各种扩展功能的版本也因此衍生。这些版本增加了新的游戏内容，修复了一些Bug，还在某些方面取得了改进。而最近出现的罪恶都市汉化版本，让更多的玩家能够更好地了解游戏，感受到独特的游戏风格。</p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E6%8B%93%E5%B1%95%E5%8A%9F%E8%83%BD%E6%B1%89%E5%8C%96/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0/">罪恶都市模组：第一人称</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-09
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <p>近年来，作为一款经典的开放世界游戏，《罪恶都市》一直以来都备受玩家们的喜爱。而作为一名忠实的《罪恶都市》玩家，我认为如果想要更加深入地探索这个游戏，不得不提到的一个东西就是罪恶都市模组。其中，尤其是第一人称模组，更是有着深远的影响。<br><a target="_blank" rel="noopener" href="https://efvccn.my.canvasite.cn/moddown/images/a966a502990b9d05fd020189d5fd35ed.jpg"><img src="https://efvccn.my.canvasite.cn/moddown/images/a966a502990b9d05fd020189d5fd35ed.jpg"></a></p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E7%AC%AC%E4%B8%80%E4%BA%BA%E7%A7%B0/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="mdui-card mdui-m-b-5 mdui-hoverable">    
+      
+      
+        <div class="post-header"> 
+  <a class="post-header-title" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E8%87%AA%E7%94%B1%E5%9F%8E%E6%95%85%E4%BA%8BPC/">罪恶都市模组：自由城故事PC</a>
+  <div class="post-header-meta">
+    <span>
+      <span class="iconfont icon-calendar"></span>
+      发布于:&nbsp;2023-05-07
+    </span>
+    <span>
+      <span class="iconfont icon-calendar-check"></span>
+      更新于:&nbsp;2023-05-12
+    </span>
+    <span>
+      <span class="iconfont icon-folder"></span>
+      分类于:&nbsp;
+    </span>
+    
+  </div>
+</div>   
+    
+
+
+
+      
+      
+  <div class="tag-line-space"></div>
+
+      
+      <div id="achieve-abstract" class="mdui-card-content mdui-p-x-4">
+        <div class="post-abstract mdui-typo ">
+          
+            <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>侠盗猎车手：自由城故事是由Rockstar North研发的一款动作冒险类游戏，于2005年12月25日在PSP平台上发行。该游戏是《侠盗猎车手3》的前传。游戏以1998年的自由城为背景，讲述了托尼（Toni）在自由城的一系列故事，此游戏的电脑版本（非官方移植）已更新至Beta6。<br><a target="_blank" rel="noopener" href="https://efvccn.my.canvasite.cn/moddown/images/a0272a516d0395b7a07cc592c43136c0.jpg"><img src="https://efvccn.my.canvasite.cn/moddown/images/a0272a516d0395b7a07cc592c43136c0.jpg"></a><br><a target="_blank" rel="noopener" href="https://efvccn.my.canvasite.cn/moddown/images/22df0a2164f6c0f03be11c9459b939f5.jpg"><img src="https://efvccn.my.canvasite.cn/moddown/images/22df0a2164f6c0f03be11c9459b939f5.jpg"></a></p>
+          
+        </div>
+        
+        <div style="text-align:center;">
+          <a class="post-readmore mdui-btn mdui-ripple mdui-btn-raised" href="/gtazy/2023/05/07/%E7%BD%AA%E6%81%B6%E9%83%BD%E5%B8%82%E6%A8%A1%E7%BB%84%EF%BC%9A%E8%87%AA%E7%94%B1%E5%9F%8E%E6%95%85%E4%BA%8BPC/">阅读更多</a>
+        </div>
+      </div>
+    </article>
+
+
+
+  <nav style="text-align: center;">
+    <div class="pagination">
+      <span class="page-number current">1</span><a class="page-number" href="/gtazy/page/2/">2</a><a class="extend next" rel="next" href="/gtazy/page/2/"><i class="iconfont icon-angle-right"></i></a>
+    </div>
+  </nav>
+
+  </main>
+  <footer id="footer" class="mdui-text-center mdui-m-t-5 mdui-p-b-2 mdui-p-t-4 mdui-color-theme">
+  <div class="mdui-container">
+    <div class="mdui-row">
+      
+        <a href="https://beian.miit.gov.cn" rel="noopener" target="_blank"></a>
+      
+      <span>
+        &copy; 2015 - 2023 
+        
+          <span style="color:#d9333f" class="iconfont icon-heart"></span>
+        
+        无聊的一名网友
+      </span>
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span>Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span>Theme: <a href="https://github.com/kb1000fx/Meadow" rel="noopener" target="_blank">Meadow</a></span>
+        </div>
+      
+    </div>
+    <div class="mdui-row">
+      
+        <div class="mdui-col-xs-6 mdui-text-right">
+          <span id="busuanzi_container_site_uv" style="display: none;"> <span class="iconfont icon-user"></span>总访客量 <span id="busuanzi_value_site_uv"></span></span>
+        </div>
+        <div class="mdui-col-xs-6 mdui-text-left">
+          <span id="busuanzi_container_site_pv" style="display: none;"> <span class="iconfont icon-eye"></span>总访问量 <span id="busuanzi_value_site_pv"></span></span>
+        </div>
+      
+    </div>
+ </div>
+</footer>
+  
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-ripple mdui-color-teal" style="z-index:100;"><i class="iconfont icon-arrowup"></i></button>
+  
+  
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+
+
+
+    
+<script src="/gtazy/js/mdui.min.v1.0.0.js"></script>
+
+
+
+
+<script src="/gtazy/js/meadow.js"></script>
+
+</body>
+</html >
