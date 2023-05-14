@@ -1,0 +1,6 @@
+---
+title: categories
+type: categories #增加这个和下面那行这个2个文件都这么设置
+layout: categories
+date: 2022-02-27 14:44:58
+---
